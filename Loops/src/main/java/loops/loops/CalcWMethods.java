@@ -4,6 +4,7 @@
  */
 package loops.loops;
 import java.util.Scanner;
+import loops.utils.MathUtil;
 /**
  *
  * @author quluzade
@@ -23,30 +24,18 @@ public class CalcWMethods {
         char operationSymbol = sc.next().charAt(0);
         
         if(operationSymbol == '1'){
-            System.out.println(sumDigits(firstNumber, secondNumber));
+            System.out.println(MathUtil.sumDigits(firstNumber, secondNumber));
         }
         else if(operationSymbol == '2'){
-            System.out.println(minusDigits(firstNumber, secondNumber));
+            System.out.println(MathUtil.minusDigits(firstNumber, secondNumber));
         }
         else if(operationSymbol == '3'){
-            System.out.println(multiplyDigits(firstNumber, secondNumber));
+            System.out.println(MathUtil.multiplyDigits(firstNumber, secondNumber));
         }
         else if(operationSymbol == '4'){
-            System.out.println(divideByDigits(firstNumber, secondNumber));
+            System.out.println(MathUtil.divideByDigits(firstNumber, secondNumber));
         }
     }
     
-    public static double sumDigits(double a, double b){
-        return a + b;
-    }
-    public static double multiplyDigits(double a, double b){
-        return a * b;
-    }
-    public static double divideByDigits(double a, double b){
-        return a / b ;
-    }
-    public static double minusDigits(double a, double b){
-        return a - b;
-    }
-    
+ 
 }
