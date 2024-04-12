@@ -3,7 +3,7 @@
  */
 
 package calculatorjava.calculatorjava;
-
+import java.util.Scanner;
 /**
  *
  * @author quluzade
@@ -11,6 +11,35 @@ package calculatorjava.calculatorjava;
 public class CalculatorJava {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+            Scanner sc = new Scanner(System.in);
+            
+            System.out.println("Please enter first number: ");
+            double firstNumber = sc.nextDouble();
+            
+            System.out.println("Please enter second number: ");
+            double secondNumber = sc.nextDouble();
+            
+            System.out.println("Plese select operation: *, +, -, /");
+            char operationSymbol = sc.next().charAt(0);
+            
+            
+            
+            
+            if (operationSymbol == '+'){
+                System.out.println(firstNumber +  "+" + secondNumber + "=" + (firstNumber + secondNumber) );
+            }
+            else if (operationSymbol == '*'){
+                System.out.println(firstNumber +  "*" + secondNumber + "=" + (firstNumber * secondNumber));
+            }
+            else if (operationSymbol == '/'){
+                System.out.println(firstNumber +  "/" + secondNumber + "=" + (firstNumber / secondNumber));
+            }
+            else if (operationSymbol == '-'){
+                System.out.println(firstNumber +  "-" + secondNumber + "=" + (firstNumber - secondNumber));
+            }
+            else {
+                System.out.println("UNKNOWN OPERATION");
+            }
+            
     }
 }
